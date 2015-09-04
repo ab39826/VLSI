@@ -1,0 +1,602 @@
+
+
+
+                  ##################################################
+                  ##                                              ##
+                  ##         C A L I B R E    S Y S T E M         ##
+                  ##                                              ##
+                  ##             L V S   R E P O R T              ##
+                  ##                                              ##
+                  ##################################################
+
+
+
+REPORT FILE NAME:         memoryfourbit.lvs.report
+LAYOUT NAME:              /home/ecelrc/students/abanerjee/vlsi1/svdb/memoryfourbit.sp ('memoryfourbit')
+SOURCE NAME:              /home/ecelrc/students/abanerjee/vlsi1/memoryfourbit.src.net ('memoryfourbit')
+RULE FILE:                /home/ecelrc/students/abanerjee/vlsi1/_calibrexRC.rul_
+RULE FILE TITLE:          LVS Rule File for FreePDK45
+CREATION TIME:            Wed Feb 19 21:21:12 2014
+CURRENT DIRECTORY:        /home/ecelrc/students/abanerjee/vlsi1
+USER NAME:                abanerjee
+CALIBRE VERSION:          v2011.2_34.26    Wed Jul 6 05:20:56 PDT 2011
+
+
+
+                               OVERALL COMPARISON RESULTS
+
+
+
+                  #   #         #####################  
+                   # #          #                   #  
+                    #           #     INCORRECT     #  
+                   # #          #                   #  
+                  #   #         #####################  
+
+
+  Error:    Different numbers of nets.
+  Error:    Connectivity errors.
+  Error:    Property errors.
+  Warning:  Ambiguity points were found and resolved arbitrarily.
+
+
+**************************************************************************************************************
+                                      CELL  SUMMARY
+**************************************************************************************************************
+
+  Result         Layout                        Source
+  -----------    -----------                   --------------
+  INCORRECT      memoryfourbit                 memoryfourbit
+
+
+
+**************************************************************************************************************
+                                      LVS PARAMETERS
+**************************************************************************************************************
+
+
+o LVS Setup:
+
+   LVS COMPONENT TYPE PROPERTY            element
+   LVS COMPONENT SUBTYPE PROPERTY         model
+   // LVS PIN NAME PROPERTY
+   LVS POWER NAME                         "VDD"
+   LVS GROUND NAME                        "VSS" "GROUND"
+   LVS CELL SUPPLY                        NO
+   LVS RECOGNIZE GATES                    ALL
+   LVS IGNORE PORTS                       NO
+   LVS CHECK PORT NAMES                   NO
+   LVS IGNORE TRIVIAL NAMED PORTS         NO
+   LVS BUILTIN DEVICE PIN SWAP            YES
+   LVS ALL CAPACITOR PINS SWAPPABLE       NO
+   LVS DISCARD PINS BY DEVICE             NO
+   LVS SOFT SUBSTRATE PINS                NO
+   LVS INJECT LOGIC                       NO
+   LVS EXPAND UNBALANCED CELLS            YES
+   LVS FLATTEN INSIDE CELL                NO
+   LVS EXPAND SEED PROMOTIONS             NO
+   LVS PRESERVE PARAMETERIZED CELLS       NO
+   LVS GLOBALS ARE PORTS                  YES
+   LVS REVERSE WL                         NO
+   LVS SPICE PREFER PINS                  NO
+   LVS SPICE SLASH IS SPACE               YES
+   LVS SPICE ALLOW FLOATING PINS          YES
+   // LVS SPICE ALLOW INLINE PARAMETERS     
+   LVS SPICE ALLOW UNQUOTED STRINGS       NO
+   LVS SPICE CONDITIONAL LDD              NO
+   LVS SPICE CULL PRIMITIVE SUBCIRCUITS   NO
+   LVS SPICE IMPLIED MOS AREA             NO
+   // LVS SPICE MULTIPLIER NAME
+   LVS SPICE OVERRIDE GLOBALS             NO
+   LVS SPICE REDEFINE PARAM               NO
+   LVS SPICE REPLICATE DEVICES            NO
+   LVS SPICE SCALE X PARAMETERS           NO
+   LVS SPICE STRICT WL                    NO
+   // LVS SPICE OPTION
+   LVS STRICT SUBTYPES                    NO
+   LVS EXACT SUBTYPES                     NO
+   LAYOUT CASE                            NO
+   SOURCE CASE                            NO
+   LVS COMPARE CASE                       NO
+   LVS DOWNCASE DEVICE                    NO
+   LVS REPORT MAXIMUM                     50
+   LVS PROPERTY RESOLUTION MAXIMUM        32
+   // LVS SIGNATURE MAXIMUM
+   // LVS FILTER UNUSED OPTION
+   // LVS REPORT OPTION
+   LVS REPORT UNITS                       YES
+   // LVS NON USER NAME PORT
+   // LVS NON USER NAME NET
+   // LVS NON USER NAME INSTANCE
+
+   // Reduction
+
+   LVS REDUCE SERIES MOS                  YES
+   LVS REDUCE PARALLEL MOS                YES
+   LVS REDUCE SEMI SERIES MOS             YES
+   LVS REDUCE SPLIT GATES                 YES
+   LVS REDUCE PARALLEL BIPOLAR            YES
+   LVS REDUCE SERIES CAPACITORS           YES
+   LVS REDUCE PARALLEL CAPACITORS         YES
+   LVS REDUCE SERIES RESISTORS            YES
+   LVS REDUCE PARALLEL RESISTORS          YES
+   LVS REDUCE PARALLEL DIODES             YES
+   LVS REDUCTION PRIORITY                 PARALLEL
+   
+   LVS SHORT EQUIVALENT NODES             NO
+
+   // Trace Property
+
+   TRACE PROPERTY  mn(nmos_vtl)  l l 4e-09 ABSOLUTE
+   TRACE PROPERTY  mn(nmos_vtl)  w w 4e-09 ABSOLUTE
+   TRACE PROPERTY  mp(pmos_vtl)  l l 4e-09 ABSOLUTE
+   TRACE PROPERTY  mp(pmos_vtl)  w w 4e-09 ABSOLUTE
+   TRACE PROPERTY  mn(nmos_vth)  l l 4e-09 ABSOLUTE
+   TRACE PROPERTY  mn(nmos_vth)  w w 4e-09 ABSOLUTE
+   TRACE PROPERTY  mp(pmos_vth)  l l 4e-09 ABSOLUTE
+   TRACE PROPERTY  mp(pmos_vth)  w w 4e-09 ABSOLUTE
+   TRACE PROPERTY  mn(nmos_vtg)  l l 4e-09 ABSOLUTE
+   TRACE PROPERTY  mn(nmos_vtg)  w w 4e-09 ABSOLUTE
+   TRACE PROPERTY  mp(pmos_vtg)  l l 4e-09 ABSOLUTE
+   TRACE PROPERTY  mp(pmos_vtg)  w w 4e-09 ABSOLUTE
+   TRACE PROPERTY  mn(nmos_thkox)  l l 4e-09 ABSOLUTE
+   TRACE PROPERTY  mn(nmos_thkox)  w w 4e-09 ABSOLUTE
+   TRACE PROPERTY  mp(pmos_thkox)  l l 4e-09 ABSOLUTE
+   TRACE PROPERTY  mp(pmos_thkox)  w w 4e-09 ABSOLUTE
+
+
+
+                   CELL COMPARISON RESULTS ( TOP LEVEL )
+
+
+
+                  #   #         #####################  
+                   # #          #                   #  
+                    #           #     INCORRECT     #  
+                   # #          #                   #  
+                  #   #         #####################  
+
+
+  Error:    Different numbers of nets (see below).
+  Error:    Connectivity errors.
+  Error:    Property errors.
+  Warning:  Ambiguity points were found and resolved arbitrarily.
+
+LAYOUT CELL NAME:         memoryfourbit
+SOURCE CELL NAME:         memoryfourbit
+
+--------------------------------------------------------------------------------------------------------------
+
+NUMBERS OF OBJECTS
+------------------
+
+                Layout    Source         Component Type
+                ------    ------         --------------
+ Ports:             17        17
+
+ Nets:              49        33    *
+
+ Instances:         24        24         MN (4 pins)
+                    16        16         MP (4 pins)
+                ------    ------
+ Total Inst:        40        40
+
+
+       * = Number of objects in layout different from number in source.
+
+
+
+**************************************************************************************************************
+                                 INCORRECT OBJECTS
+**************************************************************************************************************
+
+
+LEGEND:
+-------
+
+  ne  = Naming Error (same layout name found in source
+        circuit, but object was matched otherwise).
+
+
+**************************************************************************************************************
+                                   INCORRECT NETS
+
+DISC#  LAYOUT NAME                                               SOURCE NAME
+**************************************************************************************************************
+
+  1    Net X0/8                                                  XI3/net42
+       --------------------------                                --------------------------
+       
+       X0/M3(31.835,-6.545):d                                    ** missing connection **
+       X0/M0(31.800,-4.617):d                                    ** missing connection **
+       
+       ** missing connection **                                  XI3/XI2/MM1:d
+       ** missing connection **                                  XI3/XI2/MM0:d
+       
+
+--------------------------------------------------------------------------------------------------------------
+
+  2    Net X1/11                                                 XI1/net42
+       --------------------------                                --------------------------
+       
+       X1/M2(38.042,-40.145):s                                   ** missing connection **
+       X1/M1(36.672,-40.145):d                                   ** missing connection **
+       
+       ** missing connection **                                  XI1/XI1/MM1:g
+       ** missing connection **                                  XI1/XI1/MM0:g
+       
+       X1/X6/M1(35.468,-38.300):d                                ** unmatched connection **
+       X1/X6/M0(35.468,-38.898):d                                ** unmatched connection **
+       
+       ** unmatched connection **                                XI1/XI2/MM1:d
+       ** unmatched connection **                                XI1/XI2/MM0:d
+       
+
+--------------------------------------------------------------------------------------------------------------
+
+  3    Net DC<0>                                                 DC<0>
+           X0/13                                                
+
+--------------------------------------------------------------------------------------------------------------
+
+  4    Net DC<1>                                                 DC<1>
+           X3/13                                                
+
+--------------------------------------------------------------------------------------------------------------
+
+  5    Net DC<2>                                                 DC<2>
+           X2/13                                                
+
+--------------------------------------------------------------------------------------------------------------
+
+  6    Net DC<3>                                                 DC<3>
+           X1/13                                                
+
+--------------------------------------------------------------------------------------------------------------
+
+  7    Net DB<0>                                                 DB<0>
+           X0/14                                                
+
+--------------------------------------------------------------------------------------------------------------
+
+  8    Net DB<1>                                                 DB<1>
+           X3/14                                                
+
+--------------------------------------------------------------------------------------------------------------
+
+  9    Net DB<2>                                                 DB<2>
+           X2/14                                                
+
+--------------------------------------------------------------------------------------------------------------
+
+ 10    Net DB<3>                                                 DB<3>
+           X1/14                                                
+
+--------------------------------------------------------------------------------------------------------------
+
+ 11    Net X0/11                                                 ** no similar net **
+
+--------------------------------------------------------------------------------------------------------------
+
+ 12    Net X0/15                                                 ** no similar net **
+
+--------------------------------------------------------------------------------------------------------------
+
+ 13    Net X0/16                                                 ** no similar net **
+
+--------------------------------------------------------------------------------------------------------------
+
+ 14    Net X0/9                                                  ** no similar net **
+
+--------------------------------------------------------------------------------------------------------------
+
+ 15    Net X1/15                                                 ** no similar net **
+
+--------------------------------------------------------------------------------------------------------------
+
+ 16    Net X1/16                                                 ** no similar net **
+
+--------------------------------------------------------------------------------------------------------------
+
+ 17    Net X1/9                                                  ** no similar net **
+
+--------------------------------------------------------------------------------------------------------------
+
+ 18    Net X2/11                                                 ** no similar net **
+
+--------------------------------------------------------------------------------------------------------------
+
+ 19    Net X2/15                                                 ** no similar net **
+
+--------------------------------------------------------------------------------------------------------------
+
+ 20    Net X2/16                                                 ** no similar net **
+
+--------------------------------------------------------------------------------------------------------------
+
+ 21    Net X2/9                                                  ** no similar net **
+
+--------------------------------------------------------------------------------------------------------------
+
+ 22    Net X3/11                                                 ** no similar net **
+
+--------------------------------------------------------------------------------------------------------------
+
+ 23    Net X3/15                                                 ** no similar net **
+
+--------------------------------------------------------------------------------------------------------------
+
+ 24    Net X3/16                                                 ** no similar net **
+
+--------------------------------------------------------------------------------------------------------------
+
+ 25    Net X3/9                                                  ** no similar net **
+
+--------------------------------------------------------------------------------------------------------------
+
+ 26    Net X1/8                                                  ** no similar net **
+
+--------------------------------------------------------------------------------------------------------------
+
+ 27    Net X2/8                                                  ** no similar net **
+
+--------------------------------------------------------------------------------------------------------------
+
+ 28    Net X3/8                                                  ** no similar net **
+
+--------------------------------------------------------------------------------------------------------------
+
+ 29    ** no similar net **                                      XI3/net61
+
+--------------------------------------------------------------------------------------------------------------
+
+ 30    ** no similar net **                                      XI3/net49
+
+--------------------------------------------------------------------------------------------------------------
+
+ 31    ** no similar net **                                      XI2/net61
+
+--------------------------------------------------------------------------------------------------------------
+
+ 32    ** no similar net **                                      XI2/net49
+
+--------------------------------------------------------------------------------------------------------------
+
+ 33    ** no similar net **                                      XI1/net61
+
+--------------------------------------------------------------------------------------------------------------
+
+ 34    ** no similar net **                                      XI1/net49
+
+--------------------------------------------------------------------------------------------------------------
+
+ 35    ** no similar net **                                      XI0/net61
+
+--------------------------------------------------------------------------------------------------------------
+
+ 36    ** no similar net **                                      XI0/net49
+
+--------------------------------------------------------------------------------------------------------------
+
+ 37    ** no similar net **                                      XI2/net42
+
+--------------------------------------------------------------------------------------------------------------
+
+ 38    ** no similar net **                                      XI0/net42
+
+
+
+**************************************************************************************************************
+                                      PROPERTY ERRORS
+
+DISC#  LAYOUT                                                    SOURCE                      ERROR
+**************************************************************************************************************
+
+ 39    X0/M1(36.562,-7.393)  MN(NMOS_VTL)                        XI2/MM6  MN(NMOS_VTL)
+       l: 0.0675 u                                               l: 0.05 u                 0.0175 u
+
+ 40    X0/M2(37.932,-7.393)  MN(NMOS_VTL)                        XI2/MM4  MN(NMOS_VTL)
+       l: 0.0675 u                                               l: 0.05 u                 0.0175 u
+
+ 41    X1/M0(31.910,-37.370)  MN(NMOS_VTL)                       XI3/MM5  MN(NMOS_VTL)
+       l: 0.0675 u                                               l: 0.05 u                 0.0175 u
+
+ 42    X1/M3(31.945,-39.297)  MP(PMOS_VTL)                       XI1/MM3  MP(PMOS_VTL)
+       l: 0.0675 u                                               l: 0.05 u                 0.0175 u
+
+ 43    X2/M0(31.910,-26.832)  MN(NMOS_VTL)                       XI0/MM5  MN(NMOS_VTL)
+       l: 0.0675 u                                               l: 0.05 u                 0.0175 u
+
+ 44    X2/M1(36.672,-29.608)  MN(NMOS_VTL)                       XI0/MM6  MN(NMOS_VTL)
+       l: 0.0675 u                                               l: 0.05 u                 0.0175 u
+
+ 45    X2/M2(38.042,-29.608)  MN(NMOS_VTL)                       XI0/MM4  MN(NMOS_VTL)
+       l: 0.0675 u                                               l: 0.05 u                 0.0175 u
+
+ 46    X2/M3(31.945,-28.760)  MP(PMOS_VTL)                       XI2/MM3  MP(PMOS_VTL)
+       l: 0.0675 u                                               l: 0.05 u                 0.0175 u
+
+ 47    X3/M0(31.910,-15.595)  MN(NMOS_VTL)                       XI1/MM5  MN(NMOS_VTL)
+       l: 0.0675 u                                               l: 0.05 u                 0.0175 u
+
+ 48    X3/M1(36.672,-18.370)  MN(NMOS_VTL)                       XI1/MM6  MN(NMOS_VTL)
+       l: 0.0675 u                                               l: 0.05 u                 0.0175 u
+
+ 49    X3/M2(38.042,-18.370)  MN(NMOS_VTL)                       XI1/MM4  MN(NMOS_VTL)
+       l: 0.0675 u                                               l: 0.05 u                 0.0175 u
+
+ 50    X3/M3(31.945,-17.523)  MP(PMOS_VTL)                       XI3/MM3  MP(PMOS_VTL)
+       l: 0.0675 u                                               l: 0.05 u                 0.0175 u
+
+ 51    X0/M0(31.800,-4.617)  MN(NMOS_VTL)                        XI2/MM5  MN(NMOS_VTL)
+       l: 0.0675 u                                               l: 0.05 u                 0.0175 u
+
+ 52    X0/M3(31.835,-6.545)  MP(PMOS_VTL)                        XI0/MM3  MP(PMOS_VTL)
+       l: 0.0675 u                                               l: 0.05 u                 0.0175 u
+
+ 53    X1/M1(36.672,-40.145)  MN(NMOS_VTL)                       XI3/MM6  MN(NMOS_VTL)
+       l: 0.0675 u                                               l: 0.05 u                 0.0175 u
+
+ 54    X1/M2(38.042,-40.145)  MN(NMOS_VTL)                       XI3/MM4  MN(NMOS_VTL)
+       l: 0.0675 u                                               l: 0.05 u                 0.0175 u
+
+
+
+**************************************************************************************************************
+                               INFORMATION AND WARNINGS
+**************************************************************************************************************
+
+
+                  Matched    Matched    Unmatched    Unmatched    Component
+                   Layout     Source       Layout       Source    Type
+                  -------    -------    ---------    ---------    ---------
+   Ports:              17         17            0            0
+
+   Nets:               31         23           18           10
+
+   Instances:          22         22            2            2    MN(NMOS_VTL)
+                       14         14            2            2    MP(PMOS_VTL)
+                  -------    -------    ---------    ---------
+   Total Inst:         36         36            4            4
+
+
+o Statistics:
+
+   3 nets were matched arbitrarily.
+
+
+o Initial Correspondence Points:
+
+   Ports:        GND! DC<0> DC<3> DC<2> DC<1> SC SB SA DB<0> DA<0> DB<1> DB<3> DB<2> DA<3> DA<2>
+                 DA<1> VDD!
+
+
+o Ambiguity Resolution Points:
+
+      (Each one of the following objects belongs to a group of indistinguishable objects.
+       The listed objects were matched arbitrarily by the Ambiguity Resolution feature of LVS.
+       Arbitrary matching may be prevented by assigning names to these objects or to adjacent nets).
+
+       Layout                                                    Source
+       ------                                                    ------
+
+                                     Nets
+                                     ----
+
+       X3/6                                                      XI3/net60
+       X2/6                                                      XI2/net60
+       X1/6                                                      XI1/net60
+
+
+
+**************************************************************************************************************
+                             DETAILED INSTANCE CONNECTIONS
+
+       LAYOUT NAME                                               SOURCE NAME
+**************************************************************************************************************
+
+          (This section contains detailed information about connections of
+           matched instances that are involved in net discrepancies).
+
+--------------------------------------------------------------------------------------------------------------
+
+       X0/M0(31.800,-4.617)  MN(NMOS_VTL)                        XI2/MM5  MN(NMOS_VTL)
+         g: SC                                                     g: SC
+         s: DC<0>                                                  s: DC<0>
+         b: X0/13                                                  b: DC<0>
+         d: X0/8                                                   ** XI3/net42 **
+         ** no similar net **                                      d: XI2/net61
+
+--------------------------------------------------------------------------------------------------------------
+
+       X0/M3(31.835,-6.545)  MP(PMOS_VTL)                        XI0/MM3  MP(PMOS_VTL)
+         g: SC                                                     g: SC
+         s: X0/6                                                   d: XI0/net60
+         d: X0/8                                                   ** XI3/net42 **
+         b: X0/16                                                  ** no similar net **
+         ** no similar net **                                      s: XI0/net61
+         ** no similar net **                                      b: XI0/net61
+
+--------------------------------------------------------------------------------------------------------------
+
+       X1/M1(36.672,-40.145)  MN(NMOS_VTL)                       XI3/MM6  MN(NMOS_VTL)
+         g: SB                                                     g: SB
+         s: DB<3>                                                  s: DB<3>
+         b: X1/14                                                  b: DB<3>
+         d: X1/11                                                  ** XI1/net42 **
+         ** no similar net **                                      d: XI3/net49
+
+--------------------------------------------------------------------------------------------------------------
+
+       X1/M2(38.042,-40.145)  MN(NMOS_VTL)                       XI3/MM4  MN(NMOS_VTL)
+         g: SA                                                     g: SA
+         d: DA<3>                                                  d: DA<3>
+         s: X1/11                                                  ** XI1/net42 **
+         b: X1/15                                                  ** no similar net **
+         ** no similar net **                                      s: XI3/net49
+         ** no similar net **                                      b: XI3/net49
+
+--------------------------------------------------------------------------------------------------------------
+
+       X2/X5/M0(33.695,-28.335)  MN(NMOS_VTL)                    XI1/XI1/MM0  MN(NMOS_VTL)
+         s: GND!                                                   s: GND!
+         b: GND!                                                   b: GND!
+         g: X2/8                                                   ** no similar net **
+         d: X2/9                                                   ** no similar net **
+         ** X1/11 **                                               g: XI1/net42
+         ** no similar net **                                      d: XI1/net49
+
+--------------------------------------------------------------------------------------------------------------
+
+       X2/X5/M1(33.695,-27.738)  MP(PMOS_VTL)                    XI1/XI1/MM1  MP(PMOS_VTL)
+         s: VDD!                                                   s: VDD!
+         b: VDD!                                                   b: VDD!
+         g: X2/8                                                   ** no similar net **
+         d: X2/9                                                   ** no similar net **
+         ** X1/11 **                                               g: XI1/net42
+         ** no similar net **                                      d: XI1/net49
+
+--------------------------------------------------------------------------------------------------------------
+
+       X3/X6/M0(35.468,-17.122)  MN(NMOS_VTL)                    XI3/XI2/MM0  MN(NMOS_VTL)
+         s: GND!                                                   s: GND!
+         b: GND!                                                   b: GND!
+         g: X3/9                                                   ** no similar net **
+         d: X3/11                                                  ** no similar net **
+         ** no similar net **                                      g: XI3/net61
+         ** X0/8 **                                                d: XI3/net42
+
+--------------------------------------------------------------------------------------------------------------
+
+       X3/X6/M1(35.468,-16.525)  MP(PMOS_VTL)                    XI3/XI2/MM1  MP(PMOS_VTL)
+         s: VDD!                                                   s: VDD!
+         b: VDD!                                                   b: VDD!
+         g: X3/9                                                   ** no similar net **
+         d: X3/11                                                  ** no similar net **
+         ** no similar net **                                      g: XI3/net61
+         ** X0/8 **                                                d: XI3/net42
+
+
+
+**************************************************************************************************************
+                                  UNMATCHED OBJECTS
+       LAYOUT                                                    SOURCE
+**************************************************************************************************************
+
+       X1/X6/M0(35.468,-38.898)  MN(NMOS_VTL)                    ** unmatched instance **
+       X1/X6/M1(35.468,-38.300)  MP(PMOS_VTL)                    ** unmatched instance **
+       X2/X6/M0(35.468,-28.360)  MN(NMOS_VTL)                    ** unmatched instance **
+       X2/X6/M1(35.468,-27.762)  MP(PMOS_VTL)                    ** unmatched instance **
+
+       ** unmatched instance **                                  XI2/XI2/MM1  MP(PMOS_VTL)
+       ** unmatched instance **                                  XI1/XI2/MM0  MN(NMOS_VTL)
+       ** unmatched instance **                                  XI1/XI2/MM1  MP(PMOS_VTL)
+       ** unmatched instance **                                  XI0/XI2/MM0  MN(NMOS_VTL)
+
+
+**************************************************************************************************************
+                                         SUMMARY
+**************************************************************************************************************
+
+Total CPU Time:      1 sec
+Total Elapsed Time:  1 sec

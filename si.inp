@@ -1,0 +1,78 @@
+// Default Spectre Simulation run title card.
+
+
+// Generated for: spectre
+// Generated on: Feb 18 19:58:39 2014
+// Design library name: Lab1
+// Design cell name: memoryfourbit
+// Design view name: schematic
+simulator lang=spectre
+global 0 vdd!
+
+//INclude Model for 45nm
+
+include "$PDK_DIR/ncsu_basekit/models/hspice/tran_models/models_nom/NMOS_VTL.inc"
+include "$PDK_DIR/ncsu_basekit/models/hspice/tran_models/models_nom/PMOS_VTL.inc"
+
+Couta (da_3 0) capacitor c = 0.01pf
+Coutb (db_3 0) capacitor c = 0.01pf
+dc_3 (dc_3 0) vsource type = pwl wave = [0n 0 0.2n 1 6.5n 1 6.6n 0  10n 0]
+Vdd (vdd! 0) vsource dc = 1
+Gnd (gnd! 0) vsource dc = 0
+sc (sc 0) vsource type = pwl wave = [0n 0 0.1n 1 1n 1  10n 1]
+sa (sa 0) vsource type = pwl wave = [0n 0 .1n 1 5n 1 5.1n 0 10n 0]
+sb (sb 0) vsource type = pwl wave = [0n 0 7n 0 7.1n 1 10n 1]
+
+tran1 tran start = 0 stop = 10n step = 0.1n errpreset = moderate
+
+// Library name: Lab1
+// Cell name: inverter
+// View name: schematic
+subckt inverter inv_in inv_out
+    M0 (inv_out inv_in 0 0) NMOS_VTL w=135n l=50n
+    M1 (inv_out inv_in vdd! vdd!) PMOS_VTL w=270n l=50n
+ends inverter
+// End of subcircuit definition.
+
+// Library name: Lab1
+// Cell name: memoryonebit
+// View name: schematic
+subckt memoryonebit da db dc sa sb sc
+    I2 (net61 net42) inverter
+    I1 (net42 net49) inverter
+    I3 (net49 net60) inverter
+    M4 (da sa net49 net49) NMOS_VTL w=135n l=50n
+    M5 (net61 sc dc dc) NMOS_VTL w=135n l=50n
+    M6 (net49 sb db db) NMOS_VTL w=135n l=50n
+    M3 (net60 sc net61 net61) PMOS_VTL w=270n l=50n
+ends memoryonebit
+// End of subcircuit definition.
+
+// Library name: Lab1
+// Cell name: memoryfourbit
+// View name: schematic
+I3 (da_3 db_3 dc_3 sa sb sc) memoryonebit
+I2 (da_0 db_0 dc_0 sa sb sc) memoryonebit
+I1 (da_1 db_1 dc_1 sa sb sc) memoryonebit
+I0 (da_2 db_2 dc_2 sa sb sc) memoryonebit
+
+// Spectre Source Statements
+
+// Spectre Analyses and Output Options Statements
+
+// Output Options
+simOptions options
+//+      reltol = 1.00000000E-03
+//+      vabstol = 1.00000000E-06
+//+      iabstol = 1.00000000E-12
+//+      temp = 27
+//+      save = allpub
+//+      currents = selected
+
+// Analyses
+// dc1 dc oppoint=logfile homotopy=all
+// tran1 tran stop=1 errpreset=moderate
+
+
+
+// End of Netlist
